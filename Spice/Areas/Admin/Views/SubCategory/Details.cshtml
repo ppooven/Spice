@@ -1,0 +1,38 @@
+﻿@model Spice.Models.SubCategory
+
+<br />
+<h2 class="text-info">Sub Category Details</h2>
+<br />
+<div class="backgroundWhite rounded">
+    <fieldset disabled>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="custom-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Category.Name" class="custom-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Category.Name" class="form-control" />
+            </div>
+        </div>
+    </fieldset>
+    <br />
+    <div class="form-group row">
+        <div class="col-5 offset-2">
+            <div class="row">
+                <div class="col-6">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info form-control">Edit</a>
+                </div>
+                <div class="col-6">
+                    <a asp-action="Index" class="btn btn-success form-control"> Back To List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
          <div class="row">
              <div class="col-6">
                  <h2 class="text-info">
-                     CategoryList
+                     Category List
                  </h2>
              </div>
              <div class="col-6 text-right">
@@ -28,13 +28,26 @@
                      </tr>  
                      @foreach (var item in Model)
                      {
-                     <tr>                               
+                     <tr>
                          <td>
                              @Html.DisplayFor(m => item.Name)
                          </td>
-                         <td>
-                             <partial name="_TableButtonPartial" model="item.Id" />
+                         <td></td>
+                         <td style="width:150px">
+                             <div class="btn-group" role="group">
+                                 <a class="btn btn-primary text-white" asp-action="Edit" asp-route-Id="@item.Id">
+                                     <i class="fas fa-edit"></i>
+                                 </a>
+                                 <a class="btn btn-success text-white" asp-action="Details" asp-route-Id="@item.Id">
+                                     <i class="fas fa-list-alt"></i>
+                                 </a>
+                                 <a class="btn btn-danger text-white" asp-action="Delete" asp-route-Id="@item.Id">
+                                     <i class="fas fa-trash-alt"></i>
+                                 </a>
+                             </div>
                          </td>
+
+                         
                      </tr>
                      }
                  </table>
