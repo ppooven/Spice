@@ -31,7 +31,7 @@ namespace Spice.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
-            HttpContext.Session.SetInt32(SD.ssShoppingCartCount, 0);
+          //  HttpContext.Session.SetInt32(SD.ssShoppingCartCount, 0);
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {
@@ -39,6 +39,7 @@ namespace Spice.Areas.Identity.Pages.Account
             }
             else
             {
+                //return Page();
                 return RedirectToPage("Logout");
             }
         }

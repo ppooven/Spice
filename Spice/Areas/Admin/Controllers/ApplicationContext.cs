@@ -1,6 +1,6 @@
 ﻿namespace Spice.Areas.Admin.Controllers
 {
-    internal class ApplicationContext
+    internal class CAApplicationContext
     {
     }
 }
